@@ -1,0 +1,51 @@
+header{
+    padding: 43px 47px;
+}
+.row {
+     justify-content: space-between;
+}
+.block.center {
+    margin: 0 auto;
+}
+.block.center ul {
+     display: flex;
+     padding: 0;
+     margin: 0;
+     justify-content: space-around;
+ }
+.block.center li {
+    float: left;
+    margin-right: 44px;
+    transition: .3s ease all;
+}
+.back{
+    color: hsl(211, 100%, 50%);
+    margin: 0 0 0 30px;
+}
+.block.right {
+    margin-left: auto;
+    display: flex;
+}
+ .block.right ul {
+     display: flex;
+     padding: 0;
+     margin: 0;
+ }
+ .block.right ul li{
+     padding: 0 20px;
+ }
+.block.right ul li:not(:last-child){
+    border-right: 1px solid #ddd
+}
+.contact-details a{
+    display: block;
+}
+.contact-details a i{
+    color: #0056b3;
+    margin-right: 5px;
+}
+.block.center li {
+    float: left;
+    margin-right: 44px;
+    transition: .3s ease all;
+}
