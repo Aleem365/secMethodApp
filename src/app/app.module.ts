@@ -12,14 +12,11 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './includes/footer/footer.component';
 import { HeaderComponent } from './includes/header/header.component';
 import { MenuComponent } from './includes/menu/menu.component';
-import { ProductsComponent } from './products/products.component';
-import { LaptopComponent } from './products/laptop/laptop.component';
-import { MobileComponent } from './products/mobile/mobile.component';
-import { TelevisionComponent } from './products/television/television.component';
-import { WashingMachineComponent } from './products/washing-machine/washing-machine.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryItems } from './appModels/gallery';
 import { GalleryItemComponent } from './gallery/gallery-item/gallery-item.component';
+import { ProductsModule } from './products/products.module';
+import { GalleryModule } from './gallery/gallery.module';
 
 @NgModule({
   declarations: [
@@ -31,18 +28,13 @@ import { GalleryItemComponent } from './gallery/gallery-item/gallery-item.compon
     FooterComponent,
     HeaderComponent,
     MenuComponent,
-    ProductsComponent,
-    LaptopComponent,
-    MobileComponent,
-    TelevisionComponent,
-    WashingMachineComponent,
-    GalleryComponent,
-    GalleryItemComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
+    ProductsModule,
+    GalleryModule,
     NgbModule,
   ],
   providers: [GalleryItems],
