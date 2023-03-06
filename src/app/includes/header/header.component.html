@@ -1,41 +1,37 @@
 <header>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <div class="block left">
                     <a href="#"><img src=".../../../../../assets/images/logo.png" width="175"></a>
-                    <a class="back">
-                        <i class="fas fa-chevron-left"></i>
+                    <a class="back" routerLink="{{goBackLink.url}}" *ngIf="goBackLink.text">
+                        <i class="lefticon"></i>{{goBackLink.text}}
                     </a>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-5">
                 <div class="block center">
-                    <ul>
-                        <li routerLinkActive="active"><a routerLink="/home">Home</a></li>
-                        <li routerLinkActive="active"><a routerLink="/about">About Us</a></li>
-                        <li routerLinkActive="active"><a routerLink="/gallery">Gallery</a></li>
-                        <li routerLinkActive="active"><a routerLink="/products">Products</a></li>
-                        <li routerLinkActive="active"><a routerLink="/services">Services</a></li>
-                        <li routerLinkActive="active"><a routerLink="/contact">Contact Us</a></li>
-                    </ul>
+                    <app-menu *ngIf="headerNav"></app-menu>
                 </div>
             </div>
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="block right">
-                    <div class="contact-details">
+                    <ng-container *ngIf="headerLoginBlock">
+                        <button *ngIf="!loggedInUser" routerLink="/login" class="btn btn-outline-primary">Sign
+                            In</button>
+                        <ul *ngIf="loggedInUser">
+                            <li>
+                                Welcome <strong class="text-primary">{{loggedInUser}}</strong>
+                            </li>
+                            <li>
+                                <a (click)="onLogout()"><i class="fas fa-unlock"></i> Logout</a>
+                            </li>
+                        </ul>
+                    </ng-container>
+                    <div class="contact-details" *ngIf="headerContactDetails">
                         <a href="mailto:uxtrendz@email.com"><i class="fas fa-envelope"></i> uxtrendz@email.com</a>
                         <a href="mailto:uxtrendz@email.com"><i class="fas fa-phone"></i> 000 (123) 456 78 90</a>
                     </div>
-                    <button class="btn btn-outline-primary">Sign In</button>
-                    <ul>
-                        <li>
-                            Welcome <strong class="text-primary">Aleem</strong>
-                        </li>
-                        <li>
-                            <a><i class="fas fa-unlock"></i> Logout</a>
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>

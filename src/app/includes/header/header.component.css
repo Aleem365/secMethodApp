@@ -7,7 +7,7 @@ header{
 .block.center {
     margin: 0 auto;
 }
-.block.center ul {
+/* .block.center ul {
      display: flex;
      padding: 0;
      margin: 0;
@@ -17,7 +17,17 @@ header{
     float: left;
     margin-right: 44px;
     transition: .3s ease all;
+} */
+.block.left {
+    margin-left: auto;
+    display: flex;
 }
+.block.left a {
+     display: flex;
+     padding: 0;
+     margin-left: 10px;
+     text-decoration: none;
+ }
 .back{
     color: hsl(211, 100%, 50%);
     margin: 0 0 0 30px;
@@ -48,4 +58,14 @@ header{
     float: left;
     margin-right: 44px;
     transition: .3s ease all;
+}
+.lefticon{
+    margin-right: 5px;
+    height: 12px;
+    width: 12px;
+    /* position: absolute; */
+    /* right: 9px; */
+    border-left: 2px solid #5b24ff;
+    border-bottom: 2px solid #5b24ff;
+    transform: rotate(42deg);
 }

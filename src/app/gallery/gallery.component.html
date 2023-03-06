@@ -1,0 +1,18 @@
+<div class="row text-left">
+    <div class="col-md-12 px-5 py-5">
+        <h1>Our Gallery</h1>
+    </div>
+    <div class="row img-gallery px-5">
+        <div class="col-md-3" *ngFor="let items of galleryImages">
+            <a class="item" [routerLink]="[items.id]">
+                <figure><img src="{{items.imgUrl}}" alt=""></figure>
+                <h6>{{items.title}}</h6>
+            </a>
+        </div>
+
+    </div>
+</div>
+
+<!-- <div>
+    <button class="btn btn-success" (click)="onCheck()">Check</button>
+</div> -->

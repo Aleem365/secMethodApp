@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
+import { Router } from '@angular/router';
+import { HeaderService } from '../appService/header.service';
 
 @Component({
   selector: 'app-login',
@@ -8,7 +10,7 @@ import { FormControl, FormGroup } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
   loginForm:any = FormGroup;
-  constructor(){ }
+  constructor(private _header:HeaderService,private router:Router){ }
   ngOnInit(): void {
     this.loginForm = new FormGroup({
       'username': new FormControl(''),
@@ -17,7 +19,15 @@ export class LoginComponent implements OnInit {
     })
   }
   onSubmit(){
-    console.log(this.loginForm.value);
+    let uname = this.loginForm.value.username;
+    let pass = this.loginForm.value.password;
+    if( pass === '123'){
+      this.router.navigate(['home']);
+      this._header.loggedInUser.next(uname);
+    }else{
+      alert('please enter correct Details');
+    }
+  }
   }
 
-}
+

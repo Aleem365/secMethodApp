@@ -17,6 +17,9 @@ import { LaptopComponent } from './products/laptop/laptop.component';
 import { MobileComponent } from './products/mobile/mobile.component';
 import { TelevisionComponent } from './products/television/television.component';
 import { WashingMachineComponent } from './products/washing-machine/washing-machine.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { GalleryItems } from './appModels/gallery';
+import { GalleryItemComponent } from './gallery/gallery-item/gallery-item.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import { WashingMachineComponent } from './products/washing-machine/washing-mach
     LaptopComponent,
     MobileComponent,
     TelevisionComponent,
-    WashingMachineComponent
+    WashingMachineComponent,
+    GalleryComponent,
+    GalleryItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +45,7 @@ import { WashingMachineComponent } from './products/washing-machine/washing-mach
     ReactiveFormsModule,
     NgbModule,
   ],
-  providers: [],
+  providers: [GalleryItems],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
