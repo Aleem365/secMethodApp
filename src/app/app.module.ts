@@ -20,6 +20,9 @@ import { WashingMachineComponent } from './products/washing-machine/washing-mach
 import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryItems } from './appModels/gallery';
 import { GalleryItemComponent } from './gallery/gallery-item/gallery-item.component';
+import { ServicesComponent } from './services/services.component';
+import { ServicesDetailComponent } from './services/services-detail/services-detail.component';
+import { ServiceDetail } from './appModels/services';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,8 @@ import { GalleryItemComponent } from './gallery/gallery-item/gallery-item.compon
     WashingMachineComponent,
     GalleryComponent,
     GalleryItemComponent,
+    ServicesComponent,
+    ServicesDetailComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,7 +50,10 @@ import { GalleryItemComponent } from './gallery/gallery-item/gallery-item.compon
     ReactiveFormsModule,
     NgbModule,
   ],
-  providers: [GalleryItems],
+  providers: [
+    GalleryItems,
+    ServiceDetail
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -11,6 +11,8 @@ import { MobileComponent } from './products/mobile/mobile.component';
 import { ProductsComponent } from './products/products.component';
 import { TelevisionComponent } from './products/television/television.component';
 import { WashingMachineComponent } from './products/washing-machine/washing-machine.component';
+import { ServicesDetailComponent } from './services/services-detail/services-detail.component';
+import { ServicesComponent } from './services/services.component';
 
 const routes: Routes = [
   {path:'', redirectTo:'login',pathMatch:'full'},
@@ -25,8 +27,9 @@ const routes: Routes = [
   {path:'mobile', component:MobileComponent},
   {path:'television', component:TelevisionComponent},
   {path:'washing-machine', component:WashingMachineComponent},
-];
-
+  {path:'services', component:ServicesComponent},
+  {path:'services/:id', component:ServicesDetailComponent},
+]
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
