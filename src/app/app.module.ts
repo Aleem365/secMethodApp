@@ -23,6 +23,7 @@ import { GalleryItemComponent } from './gallery/gallery-item/gallery-item.compon
 import { ServicesComponent } from './services/services.component';
 import { ServicesDetailComponent } from './services/services-detail/services-detail.component';
 import { ServiceDetail } from './appModels/services';
+import { DropdownDirective } from './appDirectives/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -43,6 +44,7 @@ import { ServiceDetail } from './appModels/services';
     GalleryItemComponent,
     ServicesComponent,
     ServicesDetailComponent,
+    DropdownDirective,
   ],
   imports: [
     BrowserModule,
