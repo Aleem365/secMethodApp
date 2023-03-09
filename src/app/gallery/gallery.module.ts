@@ -8,8 +8,6 @@ const galleryRoute:Route[]=[
   {path:'gallery', component:GalleryComponent},
   {path:'gallery/:id', component:GalleryItemComponent},
 ]
-
-
 @NgModule({
   declarations: [
     GalleryComponent,
@@ -20,4 +18,8 @@ const galleryRoute:Route[]=[
     RouterModule.forChild(galleryRoute),
   ]
 })
-export class GalleryModule { }
+export class GalleryModule { 
+    constructor(){
+    console.log('Gallery module loaded');
+  }
+}

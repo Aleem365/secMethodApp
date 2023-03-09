@@ -12,11 +12,13 @@ import { ContactComponent } from './contact/contact.component';
 import { FooterComponent } from './includes/footer/footer.component';
 import { HeaderComponent } from './includes/header/header.component';
 import { MenuComponent } from './includes/menu/menu.component';
-import { GalleryComponent } from './gallery/gallery.component';
 import { GalleryItems } from './appModels/gallery';
-import { GalleryItemComponent } from './gallery/gallery-item/gallery-item.component';
-import { ProductsModule } from './products/products.module';
 import { GalleryModule } from './gallery/gallery.module';
+import { ServiceDetail } from './appModels/services';
+import { ServicesModule } from './services/services.module';
+import { ProductsModule } from './products/products.module';
+import { ManageProductsModule } from './manage-products/manage-products.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -33,11 +35,22 @@ import { GalleryModule } from './gallery/gallery.module';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    ProductsModule,
     GalleryModule,
     NgbModule,
+    ServicesModule,
+    ProductsModule,
+    ManageProductsModule,
+    HttpClientModule,
+
   ],
-  providers: [GalleryItems],
+  providers: [
+    GalleryItems,
+    ServiceDetail,
+  ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor (){
+    console.log('App module loaded');
+  }
+}

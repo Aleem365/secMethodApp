@@ -14,8 +14,19 @@
                     <app-menu *ngIf="headerNav"></app-menu>
                 </div>
             </div>
+
             <div class="col-md-3">
                 <div class="block right">
+                    <div class="langChange">
+                        <ul>
+                            <li>
+                                <a routerLink="">DE</a>
+                            </li>
+                            <li>
+                                <a routerLink="">EN</a>
+                            </li>
+                        </ul>
+                    </div>
                     <ng-container *ngIf="headerLoginBlock">
                         <button *ngIf="!loggedInUser" routerLink="/login" class="btn btn-outline-primary">Sign
                             In</button>

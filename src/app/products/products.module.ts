@@ -6,14 +6,9 @@ import { ProductsComponent } from './products.component';
 import { TelevisionComponent } from './television/television.component';
 import { WashingMachineComponent } from './washing-machine/washing-machine.component';
 import { Route, RouterModule } from '@angular/router';
+import { DesignUtilityModule } from '../appModule/design-utility.module';
+import { ProductsRoutingModule } from './products-routing.module';
 
-const proRoute:Route[]=[
-  {path:'products', component:ProductsComponent},
-  {path:'laptop', component:LaptopComponent},
-  {path:'mobile', component:MobileComponent},
-  {path:'television', component:TelevisionComponent},
-  {path:'washing-machine', component:WashingMachineComponent},
-];
 
 @NgModule({
   declarations: [
@@ -25,7 +20,16 @@ const proRoute:Route[]=[
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(proRoute)
+    DesignUtilityModule,
+    ProductsRoutingModule
+  ],
+  exports: [
+    RouterModule
   ]
+
 })
-export class ProductsModule { }
+export class ProductsModule {
+  constructor(){
+    console.log('Products module loaded');
+  }
+ }
